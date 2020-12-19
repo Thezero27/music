@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Descripcion de la Pagina">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics Music</title>
+
+    <!-- ------COLOR PESTAÑA----- -->
+    <meta name="theme-color" content="#fafafa">
+
+    <!-- ------ICONO PESTAÑA----- -->
+    <link rel="icon" href="img/icon.png">
+
+    <!-- ------CSS LINKS----- -->
+    <link rel="stylesheet" href="sass/css/all.min.css">
+    <link rel="stylesheet" href="sass/css/normalize.css">
+    <link rel="stylesheet" href="sass/css/main.css">
+</head>
+
+<body>
+
+    <div class="Container"></div>
+    <h1>Lyrics Music</h1>
+    <div class="BuscadorFlex">
+        <div class="BuscadorForm">
+            <input type="text" placeholder="Artista" id="Artista">
+            <input type="text" placeholder="Cancion" id="Cancion">
+            <div class="Error"></div>
+            <button id="Buscar">Buscar</button>
+        </div>
+    </div>
+
+    <section class="modal">
+        <div class="CancionText">
+            <a href="#" id="Cerrar">x</a>
+            <h2 id="Title"></h2>
+            <div class="ScrollSong">
+                <p id="Song"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------SCRIPT------ -->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

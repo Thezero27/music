@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+.container {
+  max-width: 100%;
+  width: 85%;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+h4 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  padding-top: 70px;
+}
+
+div.BuscadorFlex {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.BuscadorFlex .BuscadorForm {
+  width: 430px;
+  text-align: center;
+  padding-top: 40px;
+}
+
+@media (max-width: 500px) {
+  div.BuscadorFlex .BuscadorForm {
+    padding-top: 160px;
+    width: 300px;
+  }
+}
+
+div.BuscadorFlex .BuscadorForm input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  outline: none;
+  margin: 20px 0;
+  border-radius: 32px;
+  border: none;
+}
+
+div.BuscadorFlex .BuscadorForm button {
+  margin-top: 28px;
+  background-color: transparent;
+  padding: 8px 25px;
+  border: none;
+  outline: none;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+  border-radius: 5px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+div.BuscadorFlex .BuscadorForm button:hover {
+  background-color: white;
+  color: #181717;
+}
+
+/* ERROR */
+div.Error {
+  color: white;
+  font-size: 17px;
+}
+
+div.Container {
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../img/fondo.jpg);
+  position: absolute;
+  z-index: -1;
+}
+
+div.Container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+section.modal {
+  z-index: 50;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.446);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+section.modal .CancionText {
+  padding: 15px 30px;
+  width: 60%;
+  margin: 0 auto;
+  height: 90vh;
+  background-color: #ffffff;
+  border-radius: 8px;
+  position: relative;
+  -webkit-animation: ModalAnit .8s ease 0s;
+          animation: ModalAnit .8s ease 0s;
+}
+
+@media (max-width: 900px) {
+  section.modal .CancionText {
+    width: 75%;
+  }
+}
+
+@media (max-width: 650px) {
+  section.modal .CancionText {
+    width: 85%;
+  }
+}
+
+@media (max-width: 500px) {
+  section.modal .CancionText {
+    width: 90%;
+    padding: 15px 15px;
+  }
+}
+
+section.modal .CancionText a {
+  font-size: 25px;
+  color: #242323;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+}
+
+section.modal .CancionText h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  padding-bottom: 37px;
+}
+
+section.modal .CancionText .ScrollSong {
+  width: 100%;
+  height: 85%;
+  overflow-y: scroll;
+  text-align: center;
+  padding: 0 60px;
+}
+
+@media (max-width: 500px) {
+  section.modal .CancionText .ScrollSong {
+    padding: 0 35px;
+  }
+}
+
+section.modal .CancionText .ScrollSong::-webkit-scrollbar {
+  width: 7px;
+  background-color: #d8d5d5;
+}
+
+section.modal .CancionText .ScrollSong::-webkit-scrollbar-thumb {
+  border-radius: 12px;
+  background-color: #afa9a9;
+}
+
+@-webkit-keyframes ModalAnit {
+  0% {
+    -webkit-transform: translateY(-700px);
+            transform: translateY(-700px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes ModalAnit {
+  0% {
+    -webkit-transform: translateY(-700px);
+            transform: translateY(-700px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=main.css.map */
