@@ -28,6 +28,7 @@ CerrarModal.addEventListener('click', () => {
 /* CONSUMIR API */
 function SearchSong(Artista, Cancion) {
     let Url = `https://api.lyrics.ovh/v1/${Artista}/${Cancion}`;
+    //https://api.lyrics.ovh/v1/ImagineDragons/believer
 
     fetch(Url)
         .then(res => {
@@ -35,7 +36,7 @@ function SearchSong(Artista, Cancion) {
         })
         .then(datos => {
             if (datos.lyrics === '') {
-                alert('Not found song');
+                alert('Canción no encontrada');
             } else {
                 document.querySelector('#Song').innerText = `${datos.lyrics}`;
                 document.querySelector('.modal').style.display = 'flex';
