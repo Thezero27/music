@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="sass/css/main.css">
 
 
-
+    
+    
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -33,10 +34,11 @@
         .dgcAlert .dgcVentana .dgcCerrar {height: 25px;width: 25px;float: right; cursor:pointer; background: url(http://www.dgcmedia.es/recursosExternos/cerrarAlert.jpg) no-repeat center center;}
         .dgcAlert .dgcVentana .dgcMensaje { margin: 0 auto; padding-top: 45px; text-align: center; width: 400px;font-size: 20px;}
         .dgcAlert .dgcVentana .dgcAceptar{background:#09C; bottom:20px; display: inline-block; font-size: 12px; font-weight: bold; height: 24px; line-height: 24px; padding-left: 5px; padding-right: 5px;text-align: center; text-transform: uppercase; width: 75px;cursor: pointer; color:#FFF; margin-top:50px;}
+        #fondoq{background-color: gray;}
     </style>
 </head>
 
-<body>
+<body id="fondoq">
     <!--button id="but">Info</button>
     <script>
         var but = document.getElementById("myBtn");
@@ -52,17 +54,19 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services" id="servicios">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio" id="portafolio">portafolio</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" id="acerca" onclick="">Acerca de</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team" id="equipo">Equipo</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index2.html">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Contacto</a></li>
+                    
                 </ul>
             </div>
         </div>
-   </nav>
-
-   <script>
+    </nav>
+    
+    <script>
         var but = document.getElementById("acerca");
         but.onclick = function() {
             alert("ESTA ES LA VERSION BETA")
@@ -109,27 +113,130 @@
 
 
     <div class="Container"></div>
-    <h1 style="translate: no;">Lyrics Music</h1>
-    <div class="BuscadorFlex">
-        <div class="BuscadorForm">
-            <input type="text" placeholder="Artista" id="Artista">
-            <input type="text" placeholder="Cancion" id="Cancion">
-            <div class="Error"></div>
-            <button id="Buscar">Buscar</button>
-        </div>
-    </div>
     
-    
-
-    <section class="modal">
-        <div class="CancionText">
-            <a href="#" id="Cerrar">x</a>
-            <h2 id="Title"></h2>
-            <div class="ScrollSong">
-                <p id="Song"></p>
+    <!--CUERPO DE LOS INTEGRANTES-->
+    <!-- Contact-->
+    <section class="page-section" id="contact">
+        <div class="container-lg">
+            <div class="text-center">
+                <h1></h1>
+                <h1></h1>
+                <h2 class="section-heading text-uppercase" style="font-size: 4vw;color: beige;">Contacta con nosotros</h2>
+                <h1></h1>
+                <h3 class="section-subheading text-muted">Rellena tus datos</h3>
             </div>
+            <form id="form" name="sentMessage" novalidate="novalidate">
+                <div class="row align-items-stretch mb-5">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" name="from_name" id="from_name" type="text" placeholder="Tu nombre *" required="required" data-validation-required-message="Por favor, escriba su nombre." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="reply_to" id="reply_to" type="email" placeholder="Tu correo electrónico *" required="required" data-validation-required-message="Por favor, introduzca su dirección de correo electrónico." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group mb-md-0">
+                            <input class="form-control" id="to_name" name="to_name" type="tel" placeholder="Su teléfono *" required="required" data-validation-required-message="Por favor, introduzca su número de teléfono." />
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group form-group-textarea mb-md-0">
+                            <textarea class="form-control" name="message" id="message" placeholder="Tu mensaje *" required="required" data-validation-required-message="por favor ingrese un mensaje"></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div id="success"></div>
+                    <button class="btn btn-primary btn-xl text-uppercase" id="button" type="submit" value="Send Email">Enviar mensaje</button>
+                </div>
+            </form>
         </div>
     </section>
+    <!--form id="form">
+        <div class="field">
+          <label for="subject">subject</label>
+          <input type="text" name="subject" id="subject">
+        </div>
+        <div class="field">
+          <label for="to_name">to_name</label>
+          <input type="text" name="to_name" id="to_name">
+        </div>
+        <div class="field">
+          <label for="from_name">from_name</label>
+          <input type="text" name="from_name" id="from_name">
+        </div>
+        <div class="field">
+          <label for="message">message</label>
+          <input type="text" name="message" id="message">
+        </div>
+        <div class="field">
+          <label for="reply_to">reply_to</label>
+          <input type="text" name="reply_to" id="reply_to">
+        </div>
+      
+        <input type="submit" id="button" value="Send Email" >
+    </form-->
+      
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+      
+    <script type="text/javascript">
+        emailjs.init('user_zByTB2OyK8sWofFePBZdB')
+        var subject = "Lyrics-Music"
+        const phone = document.getElementById('phone');
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            btn.value = 'Enviando...';
+
+            const serviceID = 'default_service';
+            const templateID = 'gmail';
+
+            emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('Enviado!');
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+        });
+      </script>
+
+
+
+    <!--ENVIO DE EMAIL-->
+    <!--script>
+        emailjs.init('user_zByTB2OyK8sWofFePBZdB')
+        var subject = "Lyrics-Music"
+        const btn = document.getElementById('button');
+
+        document.getElementById('form')
+        .addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            btn.value = 'Sending...';
+
+            const serviceID = 'default_service';
+            const templateID = 'gmail';
+
+            emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                btn.value = 'Send Email';
+                alert('Sent!');
+            }, (err) => {
+                btn.value = 'Send Email';
+                alert(JSON.stringify(err));
+            });
+        });
+    </script-->
+    
 
     <!-- ------SCRIPT------ -->
     <script src="js/main.js"></script>
