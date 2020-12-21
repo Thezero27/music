@@ -35,7 +35,7 @@
         .dgcAlert .dgcVentana .dgcCerrar {height: 25px;width: 25px;float: right; cursor:pointer; background: url(http://www.dgcmedia.es/recursosExternos/cerrarAlert.jpg) no-repeat center center;}
         .dgcAlert .dgcVentana .dgcMensaje { margin: 0 auto; padding-top: 45px; text-align: center; width: 400px;font-size: 20px;}
         .dgcAlert .dgcVentana .dgcAceptar{background:#09C; bottom:20px; display: inline-block; font-size: 12px; font-weight: bold; height: 24px; line-height: 24px; padding-left: 5px; padding-right: 5px;text-align: center; text-transform: uppercase; width: 75px;cursor: pointer; color:#FFF; margin-top:50px;}
-        #fondoq{background-color: gray;}
+        #fondoq{background-image: url(../Lyrics-Music/img/fondo3.jpg);}
     </style>
 </head>
 
@@ -56,7 +56,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services" id="servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index3.html" id="servicios">Servicios</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio" id="portafolio">portafolio</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" id="acerca" onclick="">Acerca de</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team" id="equipo">Equipo</a></li>
@@ -70,19 +70,20 @@
     <script>
         var but = document.getElementById("acerca");
         but.onclick = function() {
-            alert("ESTA ES LA VERSION BETA")
+            alert("Version--> 1.0.0.1")
             //mensaje.textContent  = "Seguro de eliminar el dato?";
         }
+        /*
         var serv = document.getElementById("servicios");
         serv.onclick = function() {
            alert("POR EL MOMENTO NO CONTAMOS CON LOS SERVICIOS NECESARIOS")
-        }
+        }*/
         var port = document.getElementById("portafolio");
         port.onclick = function() {
            alert("POR EL MOMENTO NO CONTAMOS CON LOS PORTAFOLIOS NECESARIOS")
         }
         var equipo = document.getElementById("equipo");
-        var duo = "Miguel Angel Fabian"
+        var duo = "Miguel Angel Fabian <br> The Zero"
      
         
         equipo.onclick = function() {
@@ -122,7 +123,7 @@
             <div class="text-center">
                 <h1></h1>
                 <h1></h1>
-                <h2 class="section-heading text-uppercase" style="font-size: 4vw;color: beige;">Contacta con nosotros</h2>
+                <h2 class="section-heading text-uppercase" style="font-size: 6vh;color: beige;">Contacta con nosotros</h2>
                 <h1></h1>
                 <h3 class="section-subheading text-muted">Rellena tus datos</h3>
             </div>
@@ -202,13 +203,15 @@
             emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
                 btn.value = 'Send Email';
-                alert('Enviado!');
+                alert('Muchas Gracias por tu comentario!');
             }, (err) => {
                 btn.value = 'Send Email';
                 alert(JSON.stringify(err));
             });
         });
-      </script>
+    </script>
+    
+
 
 
 
