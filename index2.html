@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <div id="success"></div>
+                    <div id="success"></div>                 
                     <button class="btn btn-primary btn-xl text-uppercase" id="button" type="submit" value="Send Email">Enviar mensaje</button>
                 </div>
             </form>
@@ -194,7 +194,7 @@
         document.getElementById('form')
         .addEventListener('submit', function(event) {
             event.preventDefault();
-
+            
             btn.value = 'Enviando...';
 
             const serviceID = 'default_service';
@@ -209,6 +209,8 @@
                 alert(JSON.stringify(err));
             });
         });
+        
+        
     </script>
     
 

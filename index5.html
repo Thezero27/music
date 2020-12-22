@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        .video{
+            width: 100%;
+            height: 50%;
+        }
+        .icon-cam{
+            width: 8vw;
+            border-radius: 22px;
+        }
+    </style>
+</head>
+<body style="background-color: gray;">
+    <div class="video-wrap">
+        <center><video class="video" id="video" autoplay></video></center>
+    </div>
+    <div class="controller">
+        <center><img src="img/camara.png" id="snap" class="icon-cam"></center>
+        <!--button id="snap">Capture</button-->
+    </div>
+    <br>
+    <center><strong><a href="index3.html" style="text-decoration: none;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 3vw;color: rgb(226, 9, 9);">Regresar</a></strong></center>
+    <canvas id="canvas" width="1000" height="600"></canvas>
+    <script>
+        'use strict';
+        const video = document.getElementById('video');
+        const snap = document.getElementById('snap');
+        const canvas = document.getElementById('canvas');
+        const errorMsgElement = document.querySelector('span#errorMsg');
+
+        const constraints = {
+            audio: false,
+            video: true
+        };
+        //Acceso a la Webcam
+        async function init() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia(constraints);
+                handleSuccess(stream);
+            } catch (e) {
+                errorMsgElement.innerHTML = 'navigator.getUserMedia error:${e.toString()}';
+            }
+        }
+        //Correcto!
+        function handleSuccess(stream) {
+            window.stream = stream;
+            video.srcObject = stream;
+        }
+        //Load init
+        init();
+        //Dibuja la imagen
+        var context = canvas.getContext('2d');
+        snap.addEventListener("click", function() {
+            context.drawImage(video, 0, 0, 640, 480);
+        });
+        //Guardar imagen
+        window.onload = function () {
+ 
+			document.getElementById('snap').onclick = function(){
+                
+				let filename = "imagen",
+                link = document.createElement('a');
+                
+                if(filename == 'imagen'){
+                    link.download = filename;
+					link.href = canvas.toDataURL("image/png");
+                }
+                else{
+                    link.download = 'imagen';
+					link.href = canvas.toDataURL("image/png");
+                }
+                link.click();
+
+                /*
+				if (filename == null){//si el usuario dio cancelar
+					return false;
+				}
+				else if (filename == ""){//si el usuario le dio click y no puso nombre al archivo
+					link.download = "Sin título";
+					link.href = canvas.toDataURL("image/png");//usa la imagen del canvas
+				}
+				else{//si el usuario le dio aceptar y puso un nombre al archivo
+					link.download = filename;
+					link.href = canvas.toDataURL("image/png");
+				}
+				link.click();*/
+			}
+        };
+    </script>
+</body>
+</html>
