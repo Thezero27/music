@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="fond2">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="busca letras de diferentes canciones">
+    <meta name="description" content="Descripcion de la Pagina">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lyrics Music</title>
+    <title>Lyrics Music-Servicio</title>
 
     <!-- ------COLOR PESTAÑA----- -->
     <meta name="theme-color" content="#fafafa">
@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="sass/css/main.css">
 
 
-
+    
+    
     <!-- Font Awesome icons (free version)-->
     <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
@@ -27,6 +28,7 @@
     <style>
         #but{
             width: 50;
+            
         }
         .dgcAlert {top: 0;position: absolute;width: 100%;display: block;height: 1000px; background: url(http://www.dgcmedia.es/recursosExternos/fondoAlert.png) repeat; text-align:center; opacity:0; display:none; z-index:999999999999999;}
         .dgcAlert .dgcVentana{width: 500px; background: white;min-height: 150px;position: relative;margin: 0 auto;color: black;padding: 10px;border-radius: 10px;}
@@ -34,16 +36,11 @@
         .dgcAlert .dgcVentana .dgcMensaje { margin: 0 auto; padding-top: 45px; text-align: center; width: 400px;font-size: 20px;}
         .dgcAlert .dgcVentana .dgcAceptar{background:#09C; bottom:20px; display: inline-block; font-size: 12px; font-weight: bold; height: 24px; line-height: 24px; padding-left: 5px; padding-right: 5px;text-align: center; text-transform: uppercase; width: 75px;cursor: pointer; color:#FFF; margin-top:50px;}
         #fondoq{background-image: url(../Lyrics-Music/img/fondo3.jpg);}
-        #karaoke{font-size: 7vh;}
     </style>
 </head>
 
-<body>
-    <!--button id="but">Info</button>
-    <script>
-        var but = document.getElementById("myBtn");
-        alert("esta es la version beta")
-    </script-->
+<body id="fondoq">
+    
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
@@ -54,17 +51,23 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index3.html" id="servicios">Servicios</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index6.html" id="portafolio">Comentarios</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#" id="portafolio">Comentarios</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" id="acerca" onclick="">Acerca de</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team" id="equipo">Equipo</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index2.html">Contacto</a></li>
+                    
                 </ul>
             </div>
         </div>
-   </nav>
+    </nav>
+    
+    
 
-   <script>
+
+
+    <script>
         var but = document.getElementById("acerca");
         but.onclick = function() {
             alert("Version--> 1.0.0.1")
@@ -112,49 +115,77 @@
 
 
     <div class="Container"></div>
-    <h1 style="translate: no;" id="karaoke">Karaoke</h1>
-    <div class="BuscadorFlex">
-        <div class="BuscadorForm">
-            <input type="text" placeholder="Artista" id="Artista">
-            <input type="text" placeholder="Cancion" id="Cancion">
-            <div class="Error"></div>
-            <button id="Buscar">Buscar</button>
-        </div>
-    </div>
     
-    
-
-    <section class="modal">
-        <div class="CancionText">
-            <a href="#" id="Cerrar">x</a>
-            <h2 id="Title"></h2>
-            <div class="ScrollSong">
-                <p id="Song"></p>
+    <!--CUERPO DE LA PAGINA-->
+    <section class="page-section" id="contact">
+        <div class="container-lg">
+            <div class="text-center">
+                <h1></h1>
+                <h1></h1>
+                <h2 class="section-heading text-uppercase" style="font-size: 6vh;color: beige;">Comentarios</h2>
+                <h1></h1>
+                <h3 class="section-subheading text-muted">Comentarios Nuevos</h3>
             </div>
+            
         </div>
     </section>
+    <br><br><br>
+    
+        <div class="container" style="background-color: beige;width: 80%;height: 89vh;">
+            
+        <div class="card-group">
+            <div class="card">
+              
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">Mahily Ramos Fabian</h5>
+                <hr>
+                <p class="card-text">Me gustó mucho, me parece interesante y funciona muy bien ya que me salió la letra completa de la canción que busqué.</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins dec</small>
+              </div>
+            </div>
+            <div class="card">
+              
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">Paulina félix Evaristo</h5>
+                <hr>
+                <p class="card-text">Esta muy linda la aplicacion mereces 5<img src="img/star.png" style="width: 3vw;"></p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins dec</small>
+              </div>
+            </div>
+            <div class="card">
+              
+              <div class="card-body">
+                <h5 class="card-title" style="text-align: center;">AryCheli ;)</h5>
+                <hr>
+                <p class="card-text">Perfecto para el karaoke :3</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Last updated 3 mins dec</small>
+              </div>
+            </div>
+        </div>
+            
+        </div>
+    
+    <!--script>
+        var fond = document.getElementById("fondoq");
+        fond.onclick = function() {
+            alert("Esta pagina aun esta en proceso!")
+            //mensaje.textContent  = "Seguro de eliminar el dato?";
+        }
+        
+    </script-->
+    
+
+
 
     <!-- ------SCRIPT------ -->
     <script src="js/main.js"></script>
-<br><br><br><br><br><br><br>
-<!-- Footer-->
-<!--footer class="footer py-3">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 text-lg-left">Copyright © Your Website 2020<br>Miguel Angel Fabian</div>
-            <div class="col-lg-4 text-lg-left">Miguel Angel Fabian</div>
-            <div class="col-lg-4 my-3 my-lg-0">
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-            </div>
-            <div class="col-lg-4 text-lg-right">
-                <a class="mr-3" href="#!">Política de privacidad</a>
-                <a href="#!">Condiciones de uso</a>
-            </div>
-        </div>
-    </div>
-</footer-->
+
 
 </body>
 <!-- Bootstrap core JS-->
