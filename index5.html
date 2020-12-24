@@ -8,13 +8,14 @@
 
     <!-- ------ICONO PESTAÑA----- -->
     <link rel="icon" href="img/icon.png">
-    <title>Document</title>
+    <title>Lyrics Music-Fotos</title>
 
     <style>
         
         .video{
             width: 100%;
             height: 50%;
+            transform: scaleX(-1);
         }
         .icon-cam{
             width: 8vw;
@@ -32,7 +33,7 @@
     </div>
     <br>
     <center><strong><a href="index3.html" style="text-decoration: none;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;font-size: 3vw;color: rgb(226, 9, 9);">Regresar</a></strong></center>
-    <canvas id="canvas" width="1000" height="600"></canvas>
+    <canvas id="canvas" width="1000" height="600" style="display: none;transform: scaleX(-1);"></canvas>
     <script>
         'use strict';
         const video = document.getElementById('video');
