@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Calculadora</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="estilos.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    
+
+    <!-- ------COLOR PESTAÑA----- -->
+    <meta name="theme-color" content="#fafafa">
+
+    <!-- ------ICONO PESTAÑA----- -->
+    <link rel="icon" href="img/icon.png">
+
+    <!-- ------CSS LINKS----- -->
+    <link rel="stylesheet" href="sass/css/all.min.css">
+    <link rel="stylesheet" href="sass/css/normalize.css">
+    <link rel="stylesheet" href="sass/css/main.css">
+
+
+    
+    
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <style>
+        #but{
+            width: 50;
+            
+        }
+        .dgcAlert {top: 0;position: absolute;width: 100%;display: block;height: 1000px; background: url(http://www.dgcmedia.es/recursosExternos/fondoAlert.png) repeat; text-align:center; opacity:0; display:none; z-index:999999999999999;}
+        .dgcAlert .dgcVentana{width: 500px; background: white;min-height: 150px;position: relative;margin: 0 auto;color: black;padding: 10px;border-radius: 10px;}
+        .dgcAlert .dgcVentana .dgcCerrar {height: 25px;width: 25px;float: right; cursor:pointer; background: url(http://www.dgcmedia.es/recursosExternos/cerrarAlert.jpg) no-repeat center center;}
+        .dgcAlert .dgcVentana .dgcMensaje { margin: 0 auto; padding-top: 45px; text-align: center; width: 400px;font-size: 20px;}
+        .dgcAlert .dgcVentana .dgcAceptar{background:#09C; bottom:20px; display: inline-block; font-size: 12px; font-weight: bold; height: 24px; line-height: 24px; padding-left: 5px; padding-right: 5px;text-align: center; text-transform: uppercase; width: 75px;cursor: pointer; color:#FFF; margin-top:50px;}
+        #fondoq{background-color: gray;}
+    </style>
+        
+        
+</head>
+<body>
+
+	<div id="particles-js"></div>
+	
+    <!--header>
+		<div class="menu">
+			<div class="contenedor">
+				<div class="logo">Pagina movil</div>
+				
+			</div>
+		</div>
+    </header--> 
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top"><img src="assets/img/navbar-logo.png" alt="" /></a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index3.html" id="servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index6.html" id="portafolio">Comentarios</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" id="acerca" onclick="">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team" id="equipo">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#">Contacto</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>   
+	
+	<br>	
+	<div class="principal contenedor">
+	   <article>           
+           <h2 class="texto">Calculadora</h2>
+           <p class="fecha">08 de Enero del 2020</p>
+           <font color="##ffeeee">
+               <p>La siguiente calculadora esta diseñada para 
+               realizar operaciones básicas para ello si tiene algunos problemas no olvide de enviarnos un comentario en la parte de <a href="index2.html" style="text-decoration: none;">Contacto</a></p>
+            </font>
+           
+           <form name="calculadora">
+               <input type="textfield" name="resp" value="">
+               <br>
+               <input type="button"value="1" onclick="document.calculadora.resp.value+='1'">
+               <input type="button"value="2" onclick="document.calculadora.resp.value+='2'">
+               <input type="button"value="3" onclick="document.calculadora.resp.value+='3'">
+               <input type="button"value="/" onclick="document.calculadora.resp.value+='/'">
+               <br>
+               <input type="button"value="4" onclick="document.calculadora.resp.value+='4'">
+               <input type="button"value="5" onclick="document.calculadora.resp.value+='5'">
+               <input type="button"value="6" onclick="document.calculadora.resp.value+='6'">
+               <input type="button"value="*" onclick="document.calculadora.resp.value+='*'">
+               <br>
+               <input type="button"value="7" onclick="document.calculadora.resp.value+='7'">
+               <input type="button"value="8" onclick="document.calculadora.resp.value+='8'">
+               <input type="button"value="9" onclick="document.calculadora.resp.value+='9'">
+               <input type="button"value="-" onclick="document.calculadora.resp.value+='-'">
+               <br>
+               <input type="button"value="0" onclick="document.calculadora.resp.value+='0'">
+               <input type="button"value="." onclick="document.calculadora.resp.value+='.'">
+               <input type="button"value="+" onclick="document.calculadora.resp.value+='+'">
+               <input type="button"value="=" onclick="document.calculadora.resp.value=eval(document.calculadora.resp.value)">
+               <br>
+               <input type="button"value="(" onclick="document.calculadora.resp.value+='('">
+               <input type="button"value="C" onclick="document.calculadora.resp.value=''">
+               <input type="button"value=")" onclick="document.calculadora.resp.value+=')'">
+           </form>
+           
+           
+	  
+           <div class="texto">
+               <h2>Diseñado por :</h2>
+               <br><p>Miguel Angel Fabian</p><br>
+                        
+           </div>
+        </article>
+    
+
+        <script>
+            var but = document.getElementById("acerca");
+            but.onclick = function() {
+                alert("Version--> 1.0.0.1")
+                //mensaje.textContent  = "Seguro de eliminar el dato?";
+            }
+            /*
+            var serv = document.getElementById("servicios");
+            serv.onclick = function() {
+               alert("POR EL MOMENTO NO CONTAMOS CON LOS SERVICIOS NECESARIOS")
+            }
+            var port = document.getElementById("portafolio");
+            port.onclick = function() {
+               alert("POR EL MOMENTO NO CONTAMOS CON LOS PORTAFOLIOS NECESARIOS")
+            }*/
+            var equipo = document.getElementById("equipo");
+            var duo = "Miguel Angel Fabian <br> The Zero"
+         
+            
+            equipo.onclick = function() {
+               alert(duo)
+            }
+    
+            //TEST
+            function alertDGC(mensaje)
+            {
+                var dgcTiempo=500
+                var ventanaCS='<div class="dgcAlert"><div class="dgcVentana" style="display: flex;width: 65vw"><div class="dgcCerrar"></div><div class="dgcMensaje">'+mensaje+'<br><div class="dgcAceptar">Aceptar</div></div></div></div>';
+                $('body').append(ventanaCS);
+                var alVentana=$('.dgcVentana').height();
+                var alNav=$(window).height();
+                var supNav=$(window).scrollTop();
+                $('.dgcAlert').css('height',$(document).height());
+                $('.dgcVentana').css('top',((alNav-alVentana)/2+supNav-100)+'px');
+                $('.dgcAlert').css('display','block');
+                $('.dgcAlert').animate({opacity:1},dgcTiempo);
+                $('.dgcCerrar,.dgcAceptar').click(function(e) {
+                    $('.dgcAlert').animate({opacity:0},dgcTiempo);
+                    setTimeout("$('.dgcAlert').remove()",dgcTiempo);
+                });
+            }
+            window.alert = function (message) {
+                alertDGC(message);
+            };
+        </script>
+
+
+    
+
+	</div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="particles.js"></script>
+	<script src="particulas.js"></script>
+</body>
+<!-- Bootstrap core JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+<!-- Third party plugin JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+</html>
